@@ -74,12 +74,7 @@ export function registrarVenda() {
   }
 
   console.log(`Data do pedido (formato: dia/mês/ano):  `);
-  console.log(`Dia: `);
-  let dia = Number(chamarInput());
-  console.log(`Mês: `);
-  let mes = Number(chamarInput());
-  console.log(`Ano: `)
-  let ano = Number(chamarInput());
+  let data = chamarInput();
 
   if (dia == "cancelar") {
     console.log(`Retornando ao menu anterior...`);
@@ -112,7 +107,7 @@ export function registrarVenda() {
 
   let novoPedido = {
     nome: nomeCliente,
-    data: [dia, mes, ano],
+    data: data,
     produto: produto,
     entrega: endereco,
   };
@@ -142,5 +137,10 @@ export function cancelarPedido(){
   for(let i = 0; i < pedidos.length; i++){
     console.log(`${i+1}. ${pedidos[i]}`);
   }
+}
+
+export function  listarDia(){
+  console.log(`Insira a data `)
+
 
 }
